@@ -89,5 +89,22 @@ topContentp[1].textContent = siteContent["main-content"]["about-content"]
 const midImg = document.querySelector('#middle-img')
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
+let bottomContenth4 = document.querySelectorAll('.bottom-content h4')
+bottomContenth4[0].textContent = siteContent["main-content"]["services-h4"]
+bottomContenth4[1].textContent = siteContent["main-content"]["vision-h4"]
+
+let bottomContentp = document.querySelectorAll('.bottom-content p')
+bottomContentp[0].textContent = siteContent["main-content"]["services-content"]
+bottomContentp[1].textContent = siteContent["main-content"]["vision-content"]
+
+let contactH4 = document.querySelector(".contact h4")
+contactH4.textContent = siteContent["contact"]["contact-h4"]
+
+let contactP = document.querySelectorAll(".contact p")
+contactP[0].textContent = siteContent["contact"]["address"]
+contactP[1].textContent = siteContent["contact"]["phone"]
+contactP[2].textContent = siteContent["contact"]["email"]
 
 //Footer
+
+ 
