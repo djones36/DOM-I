@@ -66,7 +66,7 @@ globalNav.prepend(home)
 globalNav.appendChild(returns)
 
 
-// //CTA
+//CTA
 
 let ctaH1 = document.querySelector('.cta-text h1')
 ctaH1.textContent=siteContent["cta"]["h1"];
@@ -82,9 +82,16 @@ let topContenth4 = document.querySelectorAll('.top-content h4')
 topContenth4[0].textContent = siteContent["main-content"]["features-h4"]
 topContenth4[1].textContent = siteContent["main-content"]["about-h4"]
 
+//Stretch increased font size to 70px for the h4.
+topContenth4.forEach(fontSizing => fontSizing.style.fontSize = "70px")
+
 let topContentp = document.querySelectorAll('.top-content p')
 topContentp[0].textContent = siteContent["main-content"]["features-content"]
 topContentp[1].textContent = siteContent["main-content"]["about-content"]
+
+//Stretch added padding to top of paragraphs and changed font color to blue.
+topContentp.forEach(pad => pad.style.paddingTop = "20px")
+topContentp.forEach(color => color.style.color = "blue")
 
 const midImg = document.querySelector('#middle-img')
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
@@ -93,19 +100,34 @@ let bottomContenth4 = document.querySelectorAll('.bottom-content h4')
 bottomContenth4[0].textContent = siteContent["main-content"]["services-h4"]
 bottomContenth4[1].textContent = siteContent["main-content"]["vision-h4"]
 
+//Stretch increased font size to 70px for the h4.
+bottomContenth4.forEach(fontSizing => fontSizing.style.fontSize = "70px")
+
 let bottomContentp = document.querySelectorAll('.bottom-content p')
 bottomContentp[0].textContent = siteContent["main-content"]["services-content"]
 bottomContentp[1].textContent = siteContent["main-content"]["vision-content"]
 
+//Stretch -padding on top and changed font color to blue.
+bottomContentp.forEach(pad => pad.style.paddingTop = "20px")
+bottomContentp.forEach(color => color.style.color = "blue")
+
 let contactH4 = document.querySelector(".contact h4")
 contactH4.textContent = siteContent["contact"]["contact-h4"]
+
+//Stretch centered the h4 and increased font size to 70px.
+contactH4.style.textAlign = "center"
+contactH4.style.fontSize = "70px"
 
 let contactP = document.querySelectorAll(".contact p")
 contactP[0].textContent = siteContent["contact"]["address"]
 contactP[1].textContent = siteContent["contact"]["phone"]
 contactP[2].textContent = siteContent["contact"]["email"]
 
+//Stretch centered the contact paragraphs. 
+contactP.forEach(center => center.style.textAlign = "center")
+
 //Footer
 
  let footerContent = document.querySelector("footer p")
  footerContent.textContent = siteContent["foooter"]["copyright"]
+
