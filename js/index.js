@@ -107,4 +107,5 @@ contactP[2].textContent = siteContent["contact"]["email"]
 
 //Footer
 
- 
+ let footerContent = document.querySelector("footer p")
+ footerContent.textContent = siteContent["foooter"]["copyright"]
