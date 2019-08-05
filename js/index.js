@@ -77,10 +77,17 @@ ctaButton.textContent= siteContent["cta"]["button"]
 let ctaImg = document.querySelector('#cta-img')
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
-
-
-
 //Main Content
+let topContenth4 = document.querySelectorAll('.top-content h4')
+topContenth4[0].textContent = siteContent["main-content"]["features-h4"]
+topContenth4[1].textContent = siteContent["main-content"]["about-h4"]
+
+let topContentp = document.querySelectorAll('.top-content p')
+topContentp[0].textContent = siteContent["main-content"]["features-content"]
+topContentp[1].textContent = siteContent["main-content"]["about-content"]
+
+const midImg = document.querySelector('#middle-img')
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 
 //Footer
