@@ -68,8 +68,13 @@ globalNav.appendChild(returns)
 
 //CTA
 
-let ctaH1 = document.querySelector('.cta-text h1')
-ctaH1.textContent=siteContent["cta"]["h1"];
+// let ctaH1 = document.querySelector('.cta-text h1')
+// ctaH1.textContent=siteContent["cta"]["h1"];
+
+let ctaH1 = document.querySelectorAll(".cta .cta-text h1");
+ctaH1[0].textContent = siteContent["cta"]["h1"];
+ctaH1[0].innerText = siteContent.cta.h1.split(' ').join('\n')
+
 
 let ctaButton = document.querySelector('.cta-text button')
 ctaButton.textContent= siteContent["cta"]["button"]
@@ -119,7 +124,12 @@ contactH4.style.textAlign = "center"
 contactH4.style.fontSize = "70px"
 
 let contactP = document.querySelectorAll(".contact p")
-contactP[0].textContent = siteContent["contact"]["address"]
+
+let addressArray = siteContent['contact']['address'].split(' ');
+addressArray.splice(4, 0, '\r\n');
+contactP[0].innerText = addressArray.join(' ');
+
+// contactP[0].textContent = siteContent["contact"]["address"]
 contactP[1].textContent = siteContent["contact"]["phone"]
 contactP[2].textContent = siteContent["contact"]["email"]
 
@@ -129,5 +139,5 @@ contactP.forEach(center => center.style.textAlign = "center")
 //Footer
 
  let footerContent = document.querySelector("footer p")
- footerContent.textContent = siteContent["foooter"]["copyright"]
+ footerContent.textContent = siteContent["footer"]["copyright"]
 
